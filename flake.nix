@@ -8,7 +8,7 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
 
-      version = "1.0.0";
+      version = "1.17.13b";
     in
     {
       packages.${system}.zen-browser =
@@ -18,8 +18,8 @@
 
           src = pkgs.fetchurl {
             url =
-              "https://github.com/zen-browser/zen-browser/releases/download/v${version}/Zen-Browser-x86_64.AppImage";
-            sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+              "https://github.com/zen-browser/desktop/releases/download/${version}/zen-x86_64.AppImage";
+            sha256 = "sha256-hBDQW8a1KsFDDT+2QYR27BZclbMXh3Zb92QnmqmuIPA=";
           };
 
           extraInstallCommands = ''
